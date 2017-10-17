@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:PeopleLibrary.Converters"
+                    xmlns:viewModels="clr-namespace:PeopleLibrary.ViewModels">
+
+    <DataTemplate DataType="{x:Type viewModels:StudentViewModel}">
+        <Image Source="{Binding StudentImageUrl, Converter={x:Static converters:ImageUrlConverter.Instance}}"                      
+               Stretch="None"
+               ToolTip="{Binding Student.Id}" />
+    </DataTemplate>
+
+</ResourceDictionary>
